@@ -1,6 +1,29 @@
-@media only screen and (max-width: 1200px) {
-  /*Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1151px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in;
+    margin: 0;
+    line-height: 1.6;
+    display: block;
+  }
+  /*
+   * check out here to learn more about ::before https://www.w3schools.com/cssref/sel_before.asp
+   * checkout here to learn more about ::after https://www.w3schools.com/cssref/sel_after.asp
+  */
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+  html {
+    font-family: PayPalSansSmall-Regular, Helvetica Neue, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    color: #2c2e2f;
+  }
 }
+
 @media only screen and (max-width: 600px) {
   /*Big smartphones [426px -> 600px]*/
 }
