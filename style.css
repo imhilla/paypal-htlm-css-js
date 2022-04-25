@@ -22,6 +22,12 @@
     -webkit-text-size-adjust: 100%;
     color: #2c2e2f;
   }
+
+  .pp-header::before {
+    height: 84px;
+    /* https://www.w3schools.com/css/css3_gradients.asp  */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 100%);
+  }
 }
 
 @media only screen and (max-width: 600px) {
