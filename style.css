@@ -10,6 +10,7 @@
   /*
    * check out here to learn more about ::before https://www.w3schools.com/cssref/sel_before.asp
    * checkout here to learn more about ::after https://www.w3schools.com/cssref/sel_after.asp
+   * checkout asterik here https://www.w3schools.com/cssref/sel_all.asp
   */
   *,
   ::after,
@@ -27,6 +28,42 @@
     height: 84px;
     /* https://www.w3schools.com/css/css3_gradients.asp  */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 100%);
+    top: 0;
+    z-index: -1;
+  }
+  .pp-header::after,
+  .pp-header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+  }
+  .pp-header .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pp-header *,
+  .pp-header ::after,
+  .pp-header ::before {
+    box-sizing: inherit;
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+  .pp-header {
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    padding-top: 18px;
+    z-index: 2;
+    box-sizing: border-box;
   }
 }
 
@@ -35,7 +72,4 @@
 }
 @media only screen and (max-width: 425px) {
   /*Small smartphones [325px -> 425px]*/
-  .main-container {
-    background-color: red;
-  }
 }
