@@ -55,6 +55,11 @@
   ::before {
     box-sizing: inherit;
   }
+  .pp-header .container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   .pp-header {
     font-size: 14px;
     font-size: 0.875rem;
@@ -64,6 +69,76 @@
     padding-top: 18px;
     z-index: 2;
     box-sizing: border-box;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .menu-button-wrapper {
+    width: 0;
+    float: left;
+  }
+  .menu-button-wrapper button.menu-button {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    touch-action: none;
+    padding-left: 37px;
+  }
+  .pypl-btn.pypl-btn--outline-white {
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 1px #fff;
+  }
+
+  .pypl-btn .pypl-btn--small {
+    padding: 12px 18px;
+    font-size: 0.75rem;
+    line-height: 12px;
+  }
+
+  .pypl-btn {
+    display: block;
+    position: relative;
+    max-width: 320px;
+    margin-bottom: 0;
+    background: #0070ba;
+    font-size: 15px;
+    font-family: PayPalSansSmall-Regular, Helvetica Neue, Arial, sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    padding: 13px -24px;
+    box-sizing: border-box;
+  }
+  .menu-button-wrapper button.menu-button::before {
+    height: 9px;
+    top: 13px;
+  }
+  .menu-button-wrapper button.menu-button::after {
+    height: 0;
+    top: 17px;
+    border-bottom: 0;
+  }
+  .menu-button-wrapper button.menu-button::after,
+  .menu-button-wrapper button.menu-button::before {
+    display: block;
+    content: "";
+    width: 13px;
+    position: absolute;
+    border: 1px solid #fff;
+    left: 14px;
+    border-left: 0;
+    border-right: 0;
+    transition: all 0.3s ease-out 0s;
   }
 }
 
